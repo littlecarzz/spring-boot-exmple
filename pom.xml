@@ -6,6 +6,9 @@
 	<modules>
 		<module>spring-boot-helloworld</module>
         <module>spring-boot-web</module>
+		<module>spring-boot-redis</module>
+        <module>spring-boot-thymeleaf/spring-boot-thymeleaf</module>
+        <module>spring-boot-thymeleaf/spring-boot-thymeleaf-layout</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -34,11 +37,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
-		</dependency>
+<!--		热加载-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-devtools</artifactId>-->
+<!--			<optional>true</optional>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>
