@@ -19,7 +19,7 @@ public class UserController {
 	@RequestMapping("/getUsers")
 	public List<User> getUsers() {
 		List<User> users=userMapper.getAll();
-		return users;
+        return users;
 	}
 	
     @RequestMapping("/getUser")
