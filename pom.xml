@@ -9,6 +9,9 @@
 		<module>spring-boot-redis</module>
         <module>spring-boot-thymeleaf/spring-boot-thymeleaf</module>
         <module>spring-boot-thymeleaf/spring-boot-thymeleaf-layout</module>
+        <module>spring-boot-jpa/spring-boot-jpa</module>
+        <module>spring-boot-jpa/spring-boot-multi-jpa</module>
+        <module>spring-boot-mybatis/spring-boot-mybatis-annotation</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
