@@ -40,7 +40,7 @@ public class UserController {
     
     @RequestMapping(value="/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
-    	userMapper.delete(id);
+        userMapper.delete(id);
     }
     
     
