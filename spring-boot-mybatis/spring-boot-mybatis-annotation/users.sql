@@ -13,7 +13,7 @@ File Encoding         : 65001
 Date: 2016-11-05 21:17:33
 */
 
-SET FOREIGN_KEY_CHECKS=0;
+-- SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
 -- Table structure for `users`
