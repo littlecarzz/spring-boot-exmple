@@ -16,6 +16,10 @@
         <module>spring-boot-mybatis/spring-boot-mybatis-xml-multidatasource</module>
         <module>spring-boot-mybatis/spring-boot-mybatis-annotation-multidatasource</module>
         <module>spring-boot-rabbitmq</module>
+        <module>spring-boot-scheduler</module>
+        <module>spring-boot-mail</module>
+        <module>spring-boot-mongodb/spring-boot-mongodb</module>
+        <module>spring-boot-mongodb/spring-boot-mongodb-multi</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

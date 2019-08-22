@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://cjj:123456@localhost:27017/user #集群 mongodb://user:pwd@ip1:port1,ip2:port2/database
