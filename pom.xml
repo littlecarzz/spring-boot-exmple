@@ -20,7 +20,9 @@
         <module>spring-boot-mail</module>
         <module>spring-boot-mongodb/spring-boot-mongodb</module>
         <module>spring-boot-mongodb/spring-boot-mongodb-multi</module>
-    </modules>
+        <module>spring-boot-test-package</module>
+		<module>spring-boot-shiro</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
