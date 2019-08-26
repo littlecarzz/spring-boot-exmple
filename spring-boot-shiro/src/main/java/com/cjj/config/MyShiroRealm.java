@@ -22,6 +22,7 @@ import javax.annotation.Resource;
  * @author littlecar
  * @date 2019/8/23 14:09
  */
+
 public class MyShiroRealm extends AuthorizingRealm {
     @Resource
     private UserInfoService userInfoService;
@@ -52,7 +53,7 @@ public class MyShiroRealm extends AuthorizingRealm {
                 simpleAuthorizationInfo.addStringPermission(p.getPermission());
             }
         }
-        return null;
+        return simpleAuthorizationInfo;
     }
 
     /**
@@ -86,6 +87,8 @@ public class MyShiroRealm extends AuthorizingRealm {
                 ByteSource.Util.bytes(userInfo.getCredentialsSalt()),//salt=username+salt
                 getName()  //realm name
         );
+        String credentials = (String) simpleAuthenticationInfo.getCredentials();
+        System.out.println(credentials);
         return simpleAuthenticationInfo;
     }
 }
