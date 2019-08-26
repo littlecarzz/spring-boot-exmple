@@ -22,7 +22,9 @@
         <module>spring-boot-mongodb/spring-boot-mongodb-multi</module>
         <module>spring-boot-test-package</module>
 		<module>spring-boot-shiro</module>
-	</modules>
+        <module>spring-boot-jpa-thymeleaf-curd</module>
+        <module>spring-boot-file-upload</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
