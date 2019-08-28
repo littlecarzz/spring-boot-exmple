@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>upload file</title>
+</head>
+<body>
+    <span th:text="${fileUrl}"></span><br>
+    <img th:src="@{/getPicture?filename={name}(name=${fileUrl})}" style="width: auto;height: auto">
+</body>
+</html>

@@ -7,6 +7,12 @@
 <div th:if="${message}">
     <h2 th:text="${message}"/>
 </div>
+<div th:if="${fileUrl}">
+    <form method="POST" action="/view" >
+        <input type="text" name="fileUrl" th:value="${fileUrl}"/>
+        <input type="submit" value="view" />
+    </form>
+</div>
 
 </body>
 </html>

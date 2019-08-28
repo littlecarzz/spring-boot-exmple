@@ -24,6 +24,12 @@
 		<module>spring-boot-shiro</module>
         <module>spring-boot-jpa-thymeleaf-curd</module>
         <module>spring-boot-file-upload</module>
+        <module>spring-boot-fastdfs</module>
+        <module>spring-boot-markdown</module>
+        <module>spring-boot-actuator</module>
+        <module>spring-boot-banner</module>
+        <module>spring-boot-docker</module>
+        <module>spring-boot-security-thymeleaf</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

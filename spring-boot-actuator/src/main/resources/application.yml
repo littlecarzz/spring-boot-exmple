@@ -1,0 +1,21 @@
+info:
+  app:
+    name: spring-boot-actuator
+    version: 1.0.0
+    test: test
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuator #代表启用单独的url地址来监控 Spring Boot 应用，为了安全一般都启用独立的端口来访问后端的监控信息
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true #启用接口关闭 Spring Boot
+spring:
+  security:
+    user:
+      name: admin
+      password: 123456
