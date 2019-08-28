@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
 
@@ -19,47 +20,51 @@ import java.io.IOException;
  */
 @Controller
 public class DefaultController {
-    @GetMapping("/")
+    @RequestMapping("/")
     public String index() {
         return "/home";
     }
 
-    @GetMapping("/home")
+    @RequestMapping("/home")
     public String home() {
         return "/home";
     }
 
-    @GetMapping("/admin")
+    @RequestMapping("/admin")
     public String admin() {
         return "/admin";
     }
 
-    @GetMapping("/user")
+    @RequestMapping("/user")
     public String user() {
         return "/user";
     }
 
-    @GetMapping("/about")
+    @RequestMapping("/about")
     public String about() {
         return "/about";
     }
 
-    @GetMapping("/login")
+    @RequestMapping("/login")
     public String login() {
         return "/login";
     }
 
-    @GetMapping("/403")
+    @RequestMapping("/403")
     public String error403() {
         return "/error/403";
     }
 
-    @GetMapping("qrcode")
+/*    @RequestMapping("/logout")
+    public String logout() {
+        return "/login";
+    }*/
+    @RequestMapping("qrcode")
     public String qrcode() {
         return "/qrcode";
     }
 
-    @GetMapping(value="/qrimage")
+    @RequestMapping(value="/qrimage")
     public ResponseEntity<byte[]> getQRImage() {
 
         //二维码内的信息
