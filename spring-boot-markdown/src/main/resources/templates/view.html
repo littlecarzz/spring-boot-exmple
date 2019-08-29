@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/editormd/css/editormd.preview.css}" />
+    <title>Title</title>
+</head>
+<body>
+<div id="test-markdown-view">
+    <!-- Server-side output Markdown text -->
+    <textarea style="display:none;" th:text="${blog.content}">### Hello world!</textarea>
+</div>
+</body>
+<script th:src="@{/js/jquery.min.js}" ></script>
+<script th:src="@{/editormd/js/editormd.js}" ></script>
+<script th:src="@{/editormd/lib/marked.min.js}"></script>
+<script th:src="@{/editormd/lib/prettify.min.js}"></script>
+<script type="text/javascript">
+    $(function() {
+            var testView = editormd.markdownToHTML("test-markdown-view", {
+                // markdown : "${blog.htmlContent}" // Also, you can dynamic set Markdown text
+                // htmlDecode : true,  // Enable / disable HTML tag encode.
+                // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+            });
+    });
+</script>
+</html>

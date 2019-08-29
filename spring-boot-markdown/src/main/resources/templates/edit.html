@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Edit</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}"
-          href="/css/style.css"/>
-    <link rel="stylesheet" th:href="@{/editormd/css/editormd.css}"
-          href="/editormd/css/editormd.css"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/editormd/css/editormd.css}"/>
     <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 <div>
-<span>title:</span><input type="text" name="title" style="width: 500px" id="title"/>
+<span>title:</span><input type="text" name="title" style="width: 500px" id="title"/><br/>
+    <span>摘要:</span><input type="text" name="summary" style="width: 500px" id="summary"/><br/>
 <input type="submit" title="发布" id="submitBtn" />
 </div>
 <div class="editormd" id="test-editormd">
@@ -23,10 +22,10 @@
     <textarea class="editormd-html-textarea" name="text" id="htmlContent"></textarea>
 </div>
 <div>
-    <span>摘要:</span><input type="text" name="summary" style="width: 500px" id="summary"/>
+
 </div>
-<script th:src="@{/js/jquery.min.js}" src="/js/jquery.min.js"></script>
-<script th:src="@{/editormd/js/editormd.js}" src="/editormd/js/editormd.js"></script>
+<script th:src="@{/js/jquery.min.js}" ></script>
+<script th:src="@{/editormd/js/editormd.js}" ></script>
 <script type="text/javascript">
     $(function() {
         editormd("test-editormd", {
@@ -34,11 +33,12 @@
             height  : 640,
             path    : "/editormd/lib/",//你的lib目录的路径，
             syncScrolling : "single",
+            codeFold : true,
             tocm : true, // Using [TOCM]
             tex : true, // 开启科学公式TeX语言支持，默认关闭
             flowChart : true, // 开启流程图支持，默认关闭
-            //这个配置在simple.html中并没有，但是为了能够提交表单，使用这个配置可以让构造出来的HTML代码直接在第二个隐藏的textarea域中，方便post提交表单。
-            saveHTMLToTextarea : true,
+            htmlDecode : "style,script,iframe|on*", // 开启 HTML 标签解析，为了安全性，默认不开启
+            saveHTMLToTextarea : true,// 保存 HTML 到 Textarea
             imageUpload : true,
             imageFormats : [ "jpg", "jpeg", "gif", "png", "bmp", "webp" ],
             imageUploadURL : "/uploadimg",
@@ -64,11 +64,12 @@
             var  title = $("#title").val();
             var content = $("#content").val();
             var htmlContent = $("#htmlContent").val();
+            var summary = $("#summary").val();
             $.ajax({
                 url: "/submit",
-                data: {title: title, content:content,htmlContent:htmlContent},
-                success:function () {
-                    alert("发布成功");
+                data: {title: title, content:content,htmlContent:htmlContent,summary:summary},
+                success:function (data) {
+                    alert("发布成功:"+data);
                 },
                 error:function () {
                     alert("发布失败");

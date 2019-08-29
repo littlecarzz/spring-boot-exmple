@@ -26,6 +26,18 @@ public class Blog {
     //@NotEmpty(message = "内容不能为空")
     @Column(nullable = false) // 映射为字段，值不能为空
     private String htmlContent; // 将 md 转为 html
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", summary='" + summary + '\'' +
+                ", content='" + content + '\'' +
+                ", htmlContent='" + htmlContent + '\'' +
+                '}';
+    }
+
     public Long getId() {
         return id;
     }

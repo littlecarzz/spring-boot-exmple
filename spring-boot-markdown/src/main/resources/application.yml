@@ -21,3 +21,9 @@ spring:
   http:
     encoding:
       charset: UTF-8
+  devtools:
+    restart:
+      enabled: true
+#file:
+#  staticAccessPath: /**
+#  uploadFolder: f://spring-boot//spring-boot-markdown/
