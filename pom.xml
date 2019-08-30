@@ -30,6 +30,11 @@
         <module>spring-boot-banner</module>
         <module>spring-boot-docker</module>
         <module>spring-boot-security-thymeleaf</module>
+        <module>spring-boot-commandLineRunner</module>
+        <module>spring-boot-memcache-spymemcached</module>
+		<module>spring-boot-webflux/spring-boot-webflux-quickstart-function</module>
+        <module>spring-boot-webflux/spring-boot-webflux-crud</module>
+        <module>spring-boot-webflux/spring-boot-webflux-mongodb</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
