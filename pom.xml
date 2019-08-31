@@ -35,6 +35,9 @@
 		<module>spring-boot-webflux/spring-boot-webflux-quickstart-function</module>
         <module>spring-boot-webflux/spring-boot-webflux-crud</module>
         <module>spring-boot-webflux/spring-boot-webflux-mongodb</module>
+        <module>spring-boot-webflux/spring-boot-webflux-redis</module>
+		<module>spring-boot-webflux/spring-boot-webflux-redis-cache</module>
+		<module>spring-boot-webflux/spring-boot-webflux-websocket</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
